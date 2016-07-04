@@ -1,0 +1,19 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  thenategreenexperience.com:
+    site_hosts:
+      - thenategreenexperience.com
+    local_path: ../site
+    repo: git@github.com:jlengstorf/thenategreenexperience.com.git
+    repo_subtree_path: site
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false

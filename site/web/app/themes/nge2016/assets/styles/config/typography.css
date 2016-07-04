@@ -1,0 +1,150 @@
+html,body {
+  color: $color-text;
+  font-family: $font-family-serif;
+  font-size: calc( $font-size-default * 0.75 );
+  font-weight: $font-weight-light;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media $viewport-sm {
+    font-size: $font-size-default;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $color-darkest;
+  font-family: $font-family-sans;
+  font-weight: $font-weight-ultra;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  margin-top: calc( $height-unit * 3 );
+  font-size: 175%;
+
+  @media $viewport-sm {
+    margin-top: calc( $height-unit * 4 );
+  }
+
+  + * {
+    margin-top: calc( $height-unit / 2 );
+
+    @media $viewport-sm {
+      margin-top: calc( $height-unit / 3 );
+    }
+  }
+}
+
+h3 {
+  margin-top: calc( $height-unit * 2 );
+  font-size: 125%;
+  text-transform: uppercase;
+
+  @media $viewport-sm {
+    margin-top: calc( $height-unit * 3 );
+  }
+}
+
+h4,h5,h6 {
+  margin-top: calc( $height-unit * 1 );
+
+  @media $viewport-sm {
+    margin-top: calc( $height-unit * 2 );
+  }
+}
+
+*:not(.figure) {
+  + h2:not([class]),+ h3:not([class]),+ h4:not([class]),
+  + h5:not([class]),+ h6:not([class]) {
+    margin-top: calc( $height-unit * 2 );
+  }
+}
+
+ol,ul {
+  padding-left: $font-size-default;
+}
+
+li {
+  margin-top: calc( $font-size-default / 2 );
+}
+
+strong,b {
+  color: color( $color-darkest tint(15%) );
+}
+
+a {
+  color: color( $color-brand shade(7.5%) );
+}
+
+blockquote {
+  padding: $height-unit 0;
+  border-top: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  color: color( $color-darkest tint(15%) );
+  font-family: $font-family-sans;
+  font-size: 125%;
+  font-style: italic;
+
+  @media $viewport-sm {
+    margin: calc( $height-unit * 1.5 ) -20px;
+    padding: calc( $height-unit * 1.5 ) 20px;
+  }
+
+  >p:last-child {
+
+    strong:only-child {
+      display: block;
+      color: $color-caption;
+      font-size: $font-size-default;
+      text-align: right;
+
+      &::before {
+        content: '– ';
+      }
+
+      a {
+        border-color: $color-caption;
+        color: inherit;
+
+        &:hover,&:active,&:focus {
+          border-color: $color-brand;
+          color: color( $color-brand shade(7.5%) );
+        }
+      }
+    }
+  }
+}
+
+sup {
+  position: relative;
+  top: -0.5rem;
+  font-size: calc( $font-size-default * 0.75 );
+  line-height: 0.75;
+  vertical-align: baseline;
+}
+
+hr {
+  border: 0;
+
+  &::before {
+    content: '* * *';
+    display: block;
+    margin-top: calc( $font-size-default * 1.5 );
+    color: $color-caption;
+    text-align: center;
+
+    @media $viewport-sm {
+      margin-top: calc( $font-size-default * 2 );
+    }
+  }
+}
+
+input,button {
+  font-family: $font-family-sans;
+}

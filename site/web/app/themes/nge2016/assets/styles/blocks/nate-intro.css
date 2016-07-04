@@ -1,0 +1,143 @@
+.nate-intro {
+  position: relative;
+  display: block;
+  margin-top: 0;
+  padding: calc( $height-unit * 10 ) calc( $width-unit * 5 ) calc( $height-unit * 2 );
+  background-image: url(../images/nate-green-xxs.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px solid $color-darkest;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80%;
+    width: 100vw;
+    background-image: linear-gradient(to top,
+      color( $color-darkest alpha(50%) ) 75%,
+      color( $color-darkest alpha(0%) ) 100%
+    );
+    z-index: 1;
+  }
+
+  @media $res-2x {
+    background-image: url(../images/nate-green-xxs@2x.jpg);
+  }
+
+  @media $viewport-xs {
+    padding-top: calc( $height-unit * 5 );
+    background-image: url(../images/nate-green-xs.jpg);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 75vw;
+      height: 100%;
+      background-image: linear-gradient(to right,
+        color( $color-darkest alpha(45%) ) 80%,
+        color( $color-darkest alpha(0%) ) 100%
+      );
+    }
+
+    @media $res-2x {
+      background-image: url(../images/nate-green-xs@2x.jpg);
+    }
+  }
+
+  @media $viewport-sm {
+    padding-left: calc( $width-unit * 15 );
+    background-image: url(../images/nate-green-sm.jpg);
+
+    &::after {
+      width: 75vw;
+    }
+
+    @media $res-2x {
+      background-image: url(../images/nate-green-sm@2x.jpg);
+    }
+  }
+
+  @media $viewport-md {
+    padding-top: calc( $height-unit * 6 );
+    padding-left: 275px;
+    background-image: url(../images/nate-green-md.jpg);
+
+    @media $res-2x {
+      background-image: url(../images/nate-green-md@2x.jpg);
+    }
+  }
+
+  @media $viewport-lg {
+    background-image: url(../images/nate-green-lg.jpg);
+
+    &::after {
+      width: 60vw;
+    }
+
+    @media $res-2x {
+      background-image: url(../images/nate-green-lg@2x.jpg);
+    }
+  }
+
+  @media $viewport-xl {
+    padding-left: calc( $width-unit * 13 );
+    background-image: url(../images/nate-green-xl.jpg);
+
+    &::after {
+      width: 50vw;
+    }
+
+    @media $res-2x {
+      background-image: url(../images/nate-green-xl@2x.jpg);
+    }
+  }
+
+  &__heading,&__text {
+    position: relative;
+    color: $color-lightest;
+    font-family: $font-family-sans;
+    text-shadow: 1px 1px 1px color( $color-darkest alpha(75%) );
+    z-index: 2;
+
+    @media $viewport-xs {
+      max-width: 55vw;
+    }
+
+    @media $viewport-sm {
+      max-width: 360px;
+    }
+
+    @media $viewport-xl {
+      max-width: 30vw;
+    }
+  }
+
+  &__heading {
+    line-height: 1.25;
+    font-size: 300%;
+  }
+
+  &__text {
+    margin-top: 0;
+
+    p:first-child {
+      font-size: 112.5%;
+    }
+
+    strong {
+      color: inherit;
+    }
+  }
+
+  &__as-seen-in {
+    max-width: 100%;
+  }
+
+  &__button {
+    width: auto;
+  }
+}

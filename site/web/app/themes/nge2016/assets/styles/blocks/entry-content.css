@@ -1,0 +1,13 @@
+/*
+ * This is kind of a chaos zone because it’s targeting user-generated content
+ * out of WordPress’s editor, which is often a copy-paste out of something like
+ * Word (because Nate hates me and wants to make everything harder).
+ */
+.entry-content {
+  img {
+    &:not(.aligncenter),&.alignnone {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

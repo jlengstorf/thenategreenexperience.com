@@ -1,0 +1,7 @@
+.comments {
+  margin-top: calc( $height-unit * 4 );
+
+  @media $viewport-sm {
+    margin-top: calc( $height-unit * 6 );
+  }
+}

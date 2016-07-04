@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "bower": [ "responsive-lazyload" ],
+      "main": true
+    },
+    "admin.js": {
+      "files": [
+        "scripts/admin.js"
+      ],
+      "bower": [ "responsive-lazyload" ]
+    },
+    "main.css": {
+      "files": [
+        "styles/app.css"
+      ],
+      "bower": [ "responsive-lazyload" ],
+      "main": true
+    }
+  },
+  "config": {
+    "devUrl": "http://thenategreenexperience.dev"
+  }
+}

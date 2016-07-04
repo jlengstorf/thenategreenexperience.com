@@ -1,0 +1,12 @@
+{
+  "name": "nge2016",
+  "homepage": "https://github.com/jlengstorf/thenategreenexperience.com",
+  "authors": [
+    "Jason Lengstorf <jason@lengstorf.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "responsive-lazyload": "^0.1.6"
+  }
+}

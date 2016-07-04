@@ -1,0 +1,24 @@
+{
+  "name": "nge2016",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "The new NGE theme for 2016 and beyond.",
+  "homepage": "https://github.com/jlengstorf/thenategreenexperience.com",
+  "authors": [
+    {
+      "name": "Jason Lengstorf",
+      "email": "jason@lengstorf.com",
+      "homepage": "https://lengstorf.com"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/jlengstorf/thenategreenexperience.com/issues"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "~1.0"
+  }
+}

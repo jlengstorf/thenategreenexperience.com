@@ -1,0 +1,52 @@
+/*
+ * # Site Variables
+ */
+
+/*
+ * ## Breakpoints
+ */
+$viewport-xs: (min-width: 480px);
+$viewport-sm: (min-width: 768px);
+$viewport-md: (min-width: 1024px);
+$viewport-lg: (min-width: 1280px);
+$viewport-xl: (min-width: 1400px);
+
+$res-2x: (-webkit-min-device-pixel-ratio: 1.5),  (min-resolution: 144dpi);
+
+/*
+ * ## Colors
+ */
+$color-darkest: #0B1328;
+$color-text: #63666E;
+$color-caption: #8E929D;
+$color-lightest: #FBFAFB;
+$color-gray-light: #DADEE6;
+$color-gray-medium: #373E4D;
+$color-accent: #427EF3;
+$color-brand: #427EF3;
+
+
+/*
+ * ## Fonts
+ */
+$font-family-serif: georgia, serif;
+$font-family-sans: Neuzeit Grotesk, sans-serif;
+$font-family-script: Comic Sans, sans-serif;
+$font-family-mono: monospace;
+$font-size-default: 20px;
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-ultra: 900;
+
+
+/*
+ * ## Measurements
+ */
+$height-unit: 15px;
+$width-unit: 1vw;
+
+/*
+ * ## Shared Styles
+ */
+$text-shadow: 1px 1px 2px color( $color-darkest alpha(50%) );

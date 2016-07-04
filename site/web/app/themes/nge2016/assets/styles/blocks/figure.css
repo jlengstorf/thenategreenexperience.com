@@ -1,0 +1,80 @@
+.figure {
+  width: 100%;
+
+  @media $viewport-sm {
+    &--center,&--left,&--right {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    &--center {
+      max-width: calc( 100% + 40px );
+      width: auto;
+    }
+
+    &--left,&--right {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    &--left {
+      float: left;
+      margin-right: 30px;
+    }
+
+    &--right {
+      float: right;
+      margin-left: 30px;
+    }
+  }
+
+  &__image-wrap {
+  }
+
+  &__image {
+
+  }
+
+  &__image-link {
+    border: 0;
+  }
+
+  &__caption {
+    display: block;
+    margin-top: calc( $height-unit / 2 );
+    padding: 0;
+    color: $color-caption;
+    font-family: $font-family-sans;
+    font-size: 80%;
+    font-style: italic;
+    line-height: 1.25;
+  }
+
+  &__attribution {
+    display: block;
+    margin-top: calc( $height-unit / 2 );
+    color: $color-caption;
+    font-size: 9px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media $viewport-sm {
+    &--right &__caption {
+      text-align: right;
+    }
+  }
+
+  &__attribution-link {
+    display: inline;
+    color: inherit;
+    font-size: 11px;
+    font-weight: $font-weight-normal;
+    text-decoration: none;
+
+    &:active,&:hover,&:focus {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.content {
+  max-width: 650px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: calc( $height-unit * 6 ) calc( $width-unit * 5 ) calc( $height-unit * 3 );
+
+  &--front-page {
+    padding: calc( $height-unit * 4 ) calc( $width-unit * 5 ) calc( $height-unit * 3);
+  }
+
+  @media $viewport-sm {
+    padding-top: calc( $height-unit * ( 9 + 1 / 3 ) );
+    padding-left: 0;
+    padding-right: 0;
+
+    &--front-page {
+      padding-top: calc( $height-unit * (6 + 2 / 3 ) );
+    }
+  }
+}

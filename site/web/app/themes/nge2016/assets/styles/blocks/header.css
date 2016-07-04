@@ -1,0 +1,117 @@
+.header {
+  margin-top: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to bottom,
+      color( $color-darkest alpha(30%) ) 0%,
+      color( $color-darkest alpha(0%) ) 100%
+    );
+    z-index: 1;
+  }
+
+  &--with-image {
+    background-image: url(../images/header-inside-xxs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid $color-darkest;
+    box-shadow: 0 1px 2px color( $color-darkest alpha(25%) );
+
+    @media $res-2x {
+      background-image: url(../images/header-inside-xxs@2x.jpg);
+    }
+
+    @media $viewport-xs {
+      background-image: url(../images/header-inside-xs.jpg);
+
+      @media $res-2x {
+        background-image: url(../images/header-inside-xs@2x.jpg);
+      }
+    }
+
+    @media $viewport-sm {
+      background-image: url(../images/header-inside-sm.jpg);
+
+      @media $res-2x {
+        background-image: url(../images/header-inside-sm@2x.jpg);
+      }
+    }
+
+    @media $viewport-md {
+      background-image: url(../images/header-inside-md.jpg);
+
+      @media $res-2x {
+        background-image: url(../images/header-inside-md@2x.jpg);
+      }
+    }
+
+    @media $viewport-lg {
+      background-image: url(../images/header-inside-lg.jpg);
+
+      @media $res-2x {
+        background-image: url(../images/header-inside-lg@2x.jpg);
+      }
+    }
+
+    @media $viewport-xl {
+      background-image: url(../images/header-inside-xl.jpg);
+
+      @media $res-2x {
+        background-image: url(../images/header-inside-xl@2x.jpg);
+      }
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 calc( $width-unit * 5 );
+    z-index: 2;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 0;
+    padding: $height-unit calc( $height-unit / 2 ) calc( $height-unit / 2 );
+    background: transparent;
+    color: $color-lightest;
+    font-family: $font-family-sans;
+    font-size: calc( $width-unit * 3.5 );
+    font-weight: $font-weight-ultra;
+    line-height: 1;
+    text-decoration: none;
+    text-shadow: $text-shadow;
+    transition: 200ms background linear;
+
+    &--home {
+      display: none;
+      margin-right: auto;
+    }
+
+    @media $viewport-xs {
+      display: inline-block;
+      font-size: 3vw;
+    }
+
+    @media $viewport-sm {
+      margin-left: calc( $width-unit * 1.5 );
+      font-size: calc( $width-unit * 2.75 );
+      line-height: 0.75;
+    }
+
+    @media $viewport-md {
+      font-size: calc( $font-size-default * 1.5 );
+    }
+
+    &--current,&:hover,&:active,&:focus {
+      background: color( $color-lightest alpha(25%) );
+      outline: 0;
+    }
+  }
+}

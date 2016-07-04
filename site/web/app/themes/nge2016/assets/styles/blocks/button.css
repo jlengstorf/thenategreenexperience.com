@@ -1,0 +1,42 @@
+.button {
+  display: block;
+  max-width: 90vw;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $height-unit $height-unit calc( $height-unit * 0.675 );
+  background: $color-brand;
+  border: 0;
+  border-radius: calc( $height-unit / 2 );
+  box-shadow: $text-shadow;
+  color: $color-lightest;
+  font-family: $font-family-sans;
+  text-align: center;
+  text-decoration: none;
+  transition: 200ms background linear;
+
+  &:hover,&:active,&:focus {
+    background: color( $color-brand tint(10%) );
+    outline: 0;
+  }
+
+  &__text,&__subtext {
+    display: block;
+    margin-top: 0;
+    line-height: 1;
+  }
+
+  &,&__text {
+    color: $color-lightest;
+    font-size: 105%;
+    font-weight: $font-weight-ultra;
+    text-shadow: 1px 1px 2px color( $color-darkest alpha(30%) );
+    text-transform: uppercase;
+  }
+
+  &__subtext {
+    font-size: 60%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
