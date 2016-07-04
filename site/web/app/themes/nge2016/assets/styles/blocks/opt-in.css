@@ -1,0 +1,88 @@
+.opt-in {
+  margin-left: -5vw;
+  margin-right: -5vw;
+  padding: $height-unit 5vw;
+  border-top: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-group {
+    flex: 1;
+    position: relative;
+  }
+
+  &__error + &__input-group {
+    margin-top: 0;
+  }
+
+  &__label {
+    position: absolute;
+    top: calc( $height-unit / 3 );
+    left: calc( $height-unit * 2 / 3 );
+    color: $color-caption;
+    font-family: $font-family-sans;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding: 0.5rem 0.25rem;
+    border: 2px solid $color-gray-medium;
+    border-radius: 3.5px;
+    font-size: 16px;
+    line-height: 2rem;
+    transition: 150ms border-color linear;
+
+    &:active,&:focus {
+      border-color: $color-brand;
+      outline: 0;
+    }
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    margin-top: $height-unit;
+    border: 0;
+    border-radius: 3.5px;
+    font-size: 125%;
+    line-height: 1;
+  }
+
+  @media $viewport-sm {
+    &__form {
+      align-items: top;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__input-group {
+      flex: 1 33%;
+      max-width: 33%;
+      margin-top: 0;
+    }
+
+    &__input {
+      padding-top: 0.375rem;
+      padding-bottom: 0.25rem;
+      line-height: 1.375rem;
+    }
+
+    &__submit {
+      flex: 1 33%;
+      max-width: 30%;
+      margin: 0;
+      padding-top: calc( $height-unit / 2 );
+      padding-bottom: 0;
+    }
+  }
+}

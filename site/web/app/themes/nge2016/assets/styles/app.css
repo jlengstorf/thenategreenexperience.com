@@ -32,6 +32,7 @@
 @import './blocks/footer';
 @import './blocks/header';
 @import './blocks/nate-intro';
+@import './blocks/opt-in';
 @import './blocks/post-preview';
 @import './blocks/signature';
 @import './blocks/site';

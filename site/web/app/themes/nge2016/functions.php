@@ -19,6 +19,7 @@ $sage_includes = [
   'lib/nav_walker.php', // Custom NGE nav walker
   'lib/shortcodes.php', // Custom NGE shortcodes
   'lib/filters.php',    // Custom NGE filters
+  'lib/opt-in.php',    // Custom NGE filters
 ];
 
 foreach ($sage_includes as $file) {

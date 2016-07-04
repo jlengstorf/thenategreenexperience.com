@@ -3,6 +3,7 @@
 namespace NGE\Custom\Shortcodes;
 
 use Roots\Sage\Assets;
+use NGE\Custom\OptIn;
 
 function button( $atts, $content ) {
   $classes = array_merge(['button'], explode(' ', $atts['classes'] ?? ''));
@@ -70,3 +71,8 @@ function section( $atts, $content ) {
   return '<hr>';
 }
 add_shortcode('section', __NAMESPACE__ . '\\section');
+
+function optin( $atts, $content ) {
+  return OptIn\get_markup();
+}
+add_shortcode('opt-in', __NAMESPACE__ . '\\optin');
