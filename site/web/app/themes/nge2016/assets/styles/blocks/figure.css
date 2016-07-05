@@ -8,8 +8,10 @@
     }
 
     &--center {
-      max-width: calc( 100% + 40px );
-      width: auto;
+      &,& img {
+        max-width: calc( 100% + 40px );
+        width: auto;
+      }
     }
 
     &--left,&--right {
