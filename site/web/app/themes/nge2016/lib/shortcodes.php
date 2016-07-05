@@ -4,6 +4,7 @@ namespace NGE\Custom\Shortcodes;
 
 use Roots\Sage\Assets;
 use NGE\Custom\OptIn;
+use NGE\Custom\Footnotes;
 
 function button( $atts, $content ) {
   $classes = array_merge(['button'], explode(' ', $atts['classes'] ?? ''));
@@ -61,7 +62,7 @@ function signature( $atts, $content ) {
 add_shortcode('signature', __NAMESPACE__ . '\\signature');
 
 function lead( $atts, $content ) {
-  return sprintf('<p class="lead">%s</p>',
+  return sprintf('<p class="article__lead">%s</p>',
     do_shortcode($content)
   );
 }
@@ -76,3 +77,9 @@ function optin( $atts, $content ) {
   return OptIn\get_markup();
 }
 add_shortcode('opt-in', __NAMESPACE__ . '\\optin');
+
+function footnote( $atts, $content=NULL )
+{
+    return Footnotes\add_footnote($content, get_permalink());
+}
+add_shortcode('footnote', __NAMESPACE__ . '\\footnote');

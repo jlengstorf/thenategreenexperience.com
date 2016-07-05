@@ -1,0 +1,100 @@
+/* This is the list of footnotes at the bottom of the page. */
+.footnotes {
+  padding-top: $height-unit;
+  border-top: 1px solid $color-gray-light;
+  color: $color-caption;
+  font-size: 80%;
+
+  &--hidden,&:empty {
+    display: none;
+  }
+
+  &__list {
+    padding-left: 0;
+    counter-reset: footnotes;
+    list-style: none;
+  }
+
+  &__footnote {
+    position: relative;
+    margin: 0;
+    padding: calc( $height-unit / 2 );
+    padding-left: calc( $height-unit * 2 );
+    border: 1px solid transparent;
+    border-radius: calc( $height-unit / 2 );
+    transition: 200ms all ease-in-out;
+
+    &::before {
+      counter-increment: footnotes;
+      content: counter(footnotes);
+      position: absolute;
+      left: calc( $height-unit / 2 );
+      top: 10px;
+      min-width: 15px;
+      padding: 3px 4px 0px;
+      background-color: $color-caption;
+      border: 0;
+      border-radius: 50%;
+      color: $color-lightest;
+      font-family: $font-family-sans;
+      font-size: 10px;
+      font-weight: $font-weight-bold;
+      line-height: 1.1;
+      text-align: center;
+      text-decoration: none;
+      transition: 200ms background-color linear;
+    }
+
+    &--highlight {
+      background-color: color( $color-brand tint(95%) );
+      border-color: color( $color-brand tint(75%) );
+    }
+
+    ul {
+      margin-top: calc( $height-unit / 2 );
+    }
+  }
+
+  &__return-link {
+    display: inline-block;
+    margin: 0;
+    padding-top: 3px;
+    color: $color-caption;
+    text-decoration: none;
+    transition: 200ms all ease-in-out;
+
+    &:hover,&:active,&:focus {
+      color: $color-brand;
+      outline: 0;
+    }
+  }
+}
+
+/* These are the footnote links in the body text. */
+.footnote-ref {
+  position: relative;
+  margin: 0 0.25em;
+
+  &__link {
+    display: inline-block;
+    min-width: 12px;
+    padding: 3px 4.5px 0px;
+    background-color: $color-caption;
+    border: 0;
+    border-radius: 50%;
+    color: $color-lightest;
+    font-family: $font-family-sans;
+    font-size: 10px;
+    font-weight: $font-weight-bold;
+    line-height: 1.1;
+    text-align: center;
+    text-decoration: none;
+    transition: 200ms background-color linear;
+
+    &:hover,&:active,&:focus {
+      background-color: $color-brand;
+      border: 0;
+      outline: none;
+    }
+  }
+}
