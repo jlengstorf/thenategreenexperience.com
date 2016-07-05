@@ -1,0 +1,17 @@
+.article {
+
+  &__lead {
+    font-size: 112.5%;
+  }
+
+  &__content {
+    img {
+      height: auto;
+
+      &.alignnone,&:not([class]) {
+        max-width: 100%;
+      }
+    }
+  }
+
+}
