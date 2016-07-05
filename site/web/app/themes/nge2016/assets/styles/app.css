@@ -23,13 +23,15 @@
 /*
  * Finally, load the block styles.
  */
+@import './blocks/article';
 @import './blocks/as-seen-in';
 @import './blocks/button';
 @import './blocks/comments';
 @import './blocks/content';
-@import './blocks/entry-content';
 @import './blocks/figure';
 @import './blocks/footer';
+@import './blocks/footer-bio';
+@import './blocks/footnotes';
 @import './blocks/header';
 @import './blocks/nate-intro';
 @import './blocks/opt-in';
