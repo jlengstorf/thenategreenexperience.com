@@ -2,6 +2,7 @@ html,body {
   color: $color-text;
   font-family: $font-family-serif;
   font-size: calc( $font-size-default * 0.75 );
+  font-variant-ligatures: common-ligatures;
   font-weight: $font-weight-light;
   line-height: 1.5;
   text-rendering: optimizeLegibility;

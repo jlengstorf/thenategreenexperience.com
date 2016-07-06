@@ -30,11 +30,11 @@ $color-brand: #427EF3;
  * ## Fonts
  */
 $font-family-serif: georgia, serif;
-$font-family-sans: Neuzeit Grotesk, sans-serif;
-$font-family-script: Comic Sans, sans-serif;
+$font-family-sans: "neuzeit-grotesk" sans-serif;
+$font-family-script: sans-serif;
 $font-family-mono: monospace;
 $font-size-default: 20px;
-$font-weight-light: 200;
+$font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-ultra: 900;
