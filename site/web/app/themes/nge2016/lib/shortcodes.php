@@ -27,17 +27,17 @@ function button( $atts, $content ) {
 add_shortcode('button', __NAMESPACE__ . '\\button');
 
 function as_seen_in( $atts, $content ) {
-  $img_path = ($atts['type'] ?? false) === 'dark' ? 'as-seen-in-dark' : 'as-seen-in';
+  $img_shade = ($atts['type'] ?? false) === 'dark' ? 'dark' : 'light';
   $classes = array_merge(['as-seen-in'], explode(' ', $atts['classes'] ?? ''));
   $img_dir = get_template_directory_uri();
   $alt = $atts['alt'] ?? 'Nate Green has been featured on multiple major websites.';
   $srcset = [
-    Assets\asset_path("images/${img_path}-300w.png") . " 300w",
-    Assets\asset_path("images/${img_path}.png") . " 360w",
-    Assets\asset_path("images/${img_path}@2x.png") . " 720w",
+    Assets\asset_path("images/as-seen-in-${img_shade}-300w.png") . " 300w",
+    Assets\asset_path("images/as-seen-in-${img_shade}.png") . " 360w",
+    Assets\asset_path("images/as-seen-in-${img_shade}@2x.png") . " 720w",
   ];
   return sprintf('<img src="%s" srcset="%s" alt="%s" class="%s">',
-    Assets\asset_path("images/${img_path}@2x.png"),
+    Assets\asset_path("images/as-seen-in-${img_shade}@2x.png"),
     join(', ', $srcset),
     $alt,
     join(' ', $classes)
