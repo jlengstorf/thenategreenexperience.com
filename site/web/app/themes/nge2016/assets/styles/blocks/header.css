@@ -101,12 +101,8 @@
 
     @media $viewport-sm {
       margin-left: calc( $width-unit * 1.5 );
-      font-size: calc( $width-unit * 2.75 );
+      font-size: $font-size-default;
       line-height: 0.75;
-    }
-
-    @media $viewport-md {
-      font-size: calc( $font-size-default * 1.5 );
     }
 
     &--current,&:hover,&:active,&:focus {
