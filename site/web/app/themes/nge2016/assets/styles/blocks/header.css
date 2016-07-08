@@ -15,56 +15,9 @@
     z-index: 1;
   }
 
-  &--with-image {
-    background-image: url(../images/header-inside-xxs.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 2px solid $color-darkest;
+  &--solid {
+    background-color: $color-darkest;
     box-shadow: 0 1px 2px color( $color-darkest alpha(25%) );
-
-    @media $res-2x {
-      background-image: url(../images/header-inside-xxs@2x.jpg);
-    }
-
-    @media $viewport-xs {
-      background-image: url(../images/header-inside-xs.jpg);
-
-      @media $res-2x {
-        background-image: url(../images/header-inside-xs@2x.jpg);
-      }
-    }
-
-    @media $viewport-sm {
-      background-image: url(../images/header-inside-sm.jpg);
-
-      @media $res-2x {
-        background-image: url(../images/header-inside-sm@2x.jpg);
-      }
-    }
-
-    @media $viewport-md {
-      background-image: url(../images/header-inside-md.jpg);
-
-      @media $res-2x {
-        background-image: url(../images/header-inside-md@2x.jpg);
-      }
-    }
-
-    @media $viewport-lg {
-      background-image: url(../images/header-inside-lg.jpg);
-
-      @media $res-2x {
-        background-image: url(../images/header-inside-lg@2x.jpg);
-      }
-    }
-
-    @media $viewport-xl {
-      background-image: url(../images/header-inside-xl.jpg);
-
-      @media $res-2x {
-        background-image: url(../images/header-inside-xl@2x.jpg);
-      }
-    }
   }
 
   &__nav {
@@ -78,7 +31,7 @@
   &__link {
     display: inline-block;
     margin-top: 0;
-    padding: $height-unit calc( $height-unit / 2 ) calc( $height-unit / 2 );
+    padding: $height-unit calc( $height-unit / 2 );
     background: transparent;
     color: $color-lightest;
     font-family: $font-family-sans;
@@ -90,7 +43,6 @@
     transition: 200ms background linear;
 
     &--home {
-      display: none;
       margin-right: auto;
     }
 

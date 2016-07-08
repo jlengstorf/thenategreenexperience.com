@@ -27,10 +27,11 @@ h1 {
 
 h2 {
   margin-top: calc( $height-unit * 3 );
-  font-size: 175%;
+  font-size: 150%;
 
   @media $viewport-sm {
     margin-top: calc( $height-unit * 4 );
+    font-style: 175%;
   }
 
   + * {

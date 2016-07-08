@@ -4,7 +4,7 @@ use NGE\Custom\Nav;
 
 $header_classes = ['site__header', 'header'];
 if (!is_front_page()) {
-  array_push($header_classes, 'header--with-image');
+  array_push($header_classes, 'header--solid');
 }
 
 ?>
