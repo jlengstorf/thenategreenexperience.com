@@ -20,7 +20,7 @@
     }
   }
 
-  @media $viewport-sm {
+  @media $viewport-md {
     flex-direction: row;
     justify-content: space-between;
 

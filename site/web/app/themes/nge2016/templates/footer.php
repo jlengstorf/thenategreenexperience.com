@@ -25,7 +25,7 @@ use NGE\Custom\Nav;
       <a href="<?= home_url('/') ?>" class="footer__link footer__link--inline">Nate Green</a>
     </span>
     <span class="footer__credit">
-      Dick jokes by
+      Site designed and built by
       <a href="https://lengstorf.com/?utm_source=thenategreenexperience.com&amp;utm_medium=site-credit&amp;utm_campaign=web-design" class="footer__link footer__link--inline">Jason Lengstorf</a>
     </span>
   </p>
