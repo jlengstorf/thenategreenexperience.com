@@ -1,20 +1,40 @@
 .nate-intro {
   position: relative;
   display: block;
+  min-height: 100vh;
   margin-top: 0;
-  padding: calc( $height-unit * 10 ) calc( $width-unit * 5 ) calc( $height-unit * 2 );
+  padding: 50vw calc( $width-unit * 5 ) 10vh;
   background-image: url(../images/nate-green-xxs.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 2px solid $color-darkest;
 
+  &::before {
+    content: 'See What People Say About Me\A\2304';
+    position: absolute;
+    bottom: $height-unit;
+    left: 50%;
+    color: $color-lightest;
+    font-family: $font-family-sans;
+    font-size: 75%;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 1px 1px 2px color( $color-darkest alpha(75%) );
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    white-space: pre;
+    z-index: 2;
+  }
+
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 80%;
+    top: 45vw;
     width: 100vw;
     background-image: linear-gradient(to top,
       color( $color-darkest alpha(50%) ) 75%,
@@ -28,19 +48,11 @@
   }
 
   @media $viewport-xs {
-    padding-top: calc( $height-unit * 5 );
+    padding-top: 44vw;
     background-image: url(../images/nate-green-xs.jpg);
 
     &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 75vw;
-      height: 100%;
-      background-image: linear-gradient(to right,
-        color( $color-darkest alpha(45%) ) 80%,
-        color( $color-darkest alpha(0%) ) 100%
-      );
+      top: 40vw;
     }
 
     @media $res-2x {
@@ -49,11 +61,11 @@
   }
 
   @media $viewport-sm {
-    padding-left: calc( $width-unit * 15 );
+    padding-top: 37vw;
     background-image: url(../images/nate-green-sm.jpg);
 
     &::after {
-      width: 75vw;
+      top: 35vw;
     }
 
     @media $res-2x {
@@ -62,9 +74,20 @@
   }
 
   @media $viewport-md {
-    padding-top: calc( $height-unit * 6 );
+    padding-top: 20vw;
     padding-left: 275px;
     background-image: url(../images/nate-green-md.jpg);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 75vw;
+      background-image: linear-gradient(to right,
+        color( $color-darkest alpha(45%) ) 80%,
+        color( $color-darkest alpha(0%) ) 100%
+      );
+    }
 
     @media $res-2x {
       background-image: url(../images/nate-green-md@2x.jpg);
@@ -72,6 +95,7 @@
   }
 
   @media $viewport-lg {
+    padding-top: 30vh;
     background-image: url(../images/nate-green-lg.jpg);
 
     &::after {
@@ -104,11 +128,21 @@
     z-index: 2;
 
     @media $viewport-xs {
-      max-width: 55vw;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @media $viewport-sm {
+      max-width: 55vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media $viewport-md {
       max-width: 360px;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     @media $viewport-xl {
