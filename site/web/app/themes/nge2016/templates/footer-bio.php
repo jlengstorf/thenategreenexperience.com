@@ -2,6 +2,8 @@
 
 use Roots\Sage\Assets;
 
+$image_array = get_field('headshot', 'options');
+
 ?>
 
 <div class="footer-bio">
@@ -9,37 +11,26 @@ use Roots\Sage\Assets;
     <div class="js--lazyload" style="padding-bottom: 100%;">
       <img class="footer-bio__image"
            alt="Nate Green"
-           src="<?= Assets\asset_path('images/nate-green-footer.jpg') ?>"
+           src="<?= $image_array['url'] ?>"
            srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-           data-lazyload="<?= Assets\asset_path('images/nate-green-footer.jpg') ?> 1x,
-                          <?= Assets\asset_path('images/nate-green-footer@2x.jpg') ?> 2x">
+           data-lazyload="<?= $image_array['sizes']['medium'] ?> 1x,
+                          <?= $image_array['url'] ?> 2x">
       <noscript>
         <img class="footer-bio__image"
              alt="Nate Green"
-             src="<?= Assets\asset_path('images/nate-green-footer.jpg') ?>"
-             srcset="<?= Assets\asset_path('images/nate-green-footer.jpg') ?> 1x,
-                     <?= Assets\asset_path('images/nate-green-footer@2x.jpg') ?> 2x">
+             src="<?= $image_array['url'] ?>"
+             srcset="<?= $image_array['sizes']['medium'] ?> 1x,
+                     <?= $image_array['url'] ?> 2x">
       </noscript>
     </div>
-    <figcaption class="footer-bio__image-caption">Nate Green</figcaption>
+    <figcaption class="footer-bio__image-caption"><?php the_field('headshot_caption', 'options'); ?></figcaption>
   </figure>
   <div class="footer-bio__text-wrap">
     <h3 class="footer-bio__heading">
-      I’m Nate. Every week I send out an email sharing my latest ideas
-      and strategies.
+      <?php the_field('heading', 'options'); ?>
     </h3>
-    <p class="footer-bio__text">
-      According to the internet I’m an author and fitness expert. But what I
-      really do is try things, talk to people, and share what I learn with my
-      thousands of readers. Every week I share a practical strategy, story, or
-      idea to help you <strong>simplify and upgrade your daily life</strong> —
-      from fitness and work to relationships and mindset.
-    </p>
-    <p class="footer-bio__text">
-      <a href="<?= home_url('/what-people-say/') ?>" class="footer-bio__link">
-        Click here to get my free weekly email &amp; see what other people say
-        about it.
-      </a>
-    </p>
+    <div class="footer-bio__text">
+      <?php the_field('bio_text', 'options'); ?>
+    </div>
   </div>
 </div>
