@@ -3,9 +3,9 @@
 # Define accompanying passwords/secrets in group_vars/staging/vault.yml
 
 wordpress_sites:
-  thenategreenexperience.com:
+  nategreen.org:
     site_hosts:
-      - staging.thenategreenexperience.com
+      - staging.nategreen.org
     local_path: ../site
     repo: git@github.com:jlengstorf/thenategreenexperience.com.git
     repo_subtree_path: site
