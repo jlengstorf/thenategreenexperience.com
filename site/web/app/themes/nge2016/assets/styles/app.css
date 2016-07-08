@@ -36,5 +36,6 @@
 @import './blocks/nate-intro';
 @import './blocks/opt-in';
 @import './blocks/post-preview';
+@import './blocks/popover';
 @import './blocks/signature';
 @import './blocks/site';

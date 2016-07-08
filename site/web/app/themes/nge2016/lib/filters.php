@@ -2,6 +2,8 @@
 
 namespace NGE\Custom\Filters;
 
+use NGE\Custom\Popover;
+
 function image_markup( $html, $id, $caption, $title, $align, $url, $size, $alt ) {
   $full_pattern = '<div class="figure__image-wrap js--lazyload">' .
                   '%7$s<img class="%1$s" alt="%2$s" src="%3$s" ' .

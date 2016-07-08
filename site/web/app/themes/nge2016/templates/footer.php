@@ -1,6 +1,7 @@
 <?php
 
 use NGE\Custom\Nav;
+use NGE\Custom\Popover;
 
 ?>
 <footer class="site__footer footer">
@@ -30,3 +31,7 @@ use NGE\Custom\Nav;
     </span>
   </p>
 </footer>
+
+<?php
+
+Popover\markup();

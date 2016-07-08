@@ -1,0 +1,137 @@
+.popover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0 $height-unit;
+  margin-top: 0;
+  background: color( $color-darkest alpha(90%) );
+  opacity: 1;
+  transition: 150ms all ease-in-out;
+  z-index: 1000;
+
+  &--fade-out {
+    opacity: 0;
+  }
+
+  &--hidden {
+    position: absolute;
+    top: -1;
+    left: -1;
+    width: 0;
+    height: 0;
+    display: none;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .no-js & {
+    position: static;
+
+    &--hidden {
+      display: flex;
+    }
+  }
+
+  &__content {
+    order: 2;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90vw;
+    width: 750px;
+    padding: calc( $height-unit * 1.5 );
+    background: $color-lightest;
+    box-shadow: 1px 1px 2px color( $color-darkest alpha(50%) );
+    overflow-y: scroll;
+
+    @media $viewport-sm {
+      padding: calc( $height-unit * 2 );
+    }
+  }
+
+  &__image-wrap {
+    display: none;
+    flex: 1 210px;
+    max-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:empty {
+      display: none;
+    }
+
+    @media $viewport-sm {
+      display: inline-block;
+      margin-right: calc( $height-unit * 2 );
+    }
+  }
+
+  &__lazyload {
+    border: 1px solid $color-caption;
+    border-radius: 50%;
+  }
+
+  &__image {
+    border-radius: 50%;
+  }
+
+  &__text-wrap {
+    flex: 2 calc( 60% - ($height-unit * 2) );
+    margin-top: 0;
+    font-size: 90%;
+  }
+
+  &__heading {
+    margin-top: 0;
+    text-align: center;
+
+    @media $viewport-sm {
+      text-align: left;
+    }
+  }
+
+  &__form-wrap {
+    flex: 3 100%;
+    margin-top: 0;
+
+    @media $viewport-sm {
+      margin-top: $height-unit;
+    }
+  }
+
+  &__form {
+    margin: $height-unit 0 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &__close {
+    order: 1;
+    max-width: 90vw;
+    width: 750px;
+    margin-top: 0;
+    text-align: right;
+
+    .no-js & {
+      display: none;
+    }
+  }
+
+  &__close-link {
+    display: inline-block;
+    padding: 0.5em 0;
+    color: $color-lightest;
+    font-family: $font-family-sans;
+    font-size: 75%;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

@@ -5,6 +5,7 @@ namespace NGE\Custom\Shortcodes;
 use Roots\Sage\Assets;
 use NGE\Custom\OptIn;
 use NGE\Custom\Footnotes;
+use NGE\Custom\Popover;
 
 function button( $atts, $content ) {
   $classes = array_merge(['button'], explode(' ', $atts['classes'] ?? ''));
@@ -12,6 +13,11 @@ function button( $atts, $content ) {
   $text = $atts['text'] ?? $content ?? 'Click Here';
   $subtext = $atts['subtext'] ?? false;
   $text_markup = '<strong class="button__text">' . $text . "</strong>\n";
+
+  if (array_key_exists('popover', $atts) && !!$atts['popover']) {
+    $classes[] = 'button--open-popover';
+    Popover\show();
+  }
 
   if ($subtext) {
     $subtext_markup = '<span class="button__subtext">' . $subtext . '</span>';
@@ -21,7 +27,7 @@ function button( $atts, $content ) {
     $href,
     join(' ', $classes),
     $text_markup,
-    $subtext_markup
+    $subtext_markup ?? ''
   );
 }
 add_shortcode('button', __NAMESPACE__ . '\\button');
@@ -53,13 +59,32 @@ function signature( $atts, $content ) {
     Assets\asset_path('images/signature@2x.png') . " 500w",
   ];
   return sprintf('<img src="%s" srcset="%s" alt="%s" class="%s">',
-    Assets\asset_path('signature@2x.png'),
+    Assets\asset_path('images/signature@2x.png'),
     join(', ', $srcset),
     $alt,
     join(' ', $classes)
   );
 }
 add_shortcode('signature', __NAMESPACE__ . '\\signature');
+
+function headshot( $atts, $content ) {
+  $classes = array_merge(['headshot'], explode(' ', $atts['classes'] ?? ''));
+  $alt = $atts['alt'] ?? 'Nate Green';
+  $blank = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///////' .
+           'yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+  $srcset = [
+    Assets\asset_path('images/headshot.jpg') . " 210w",
+    Assets\asset_path('images/headshot@2x.jpg') . " 420w",
+  ];
+  return sprintf('<div class="popover__lazyload js--lazyload" style="padding-bottom: 100%%"><img src="%s" srcset="%s" data-lazyload="%s" alt="%s" class="%s"></div>',
+    Assets\asset_path('images/headshot@2x.jpg'),
+    $blank,
+    join(', ', $srcset),
+    $alt,
+    join(' ', $classes)
+  );
+}
+add_shortcode('headshot', __NAMESPACE__ . '\\headshot');
 
 function lead( $atts, $content ) {
   return sprintf('<p class="article__lead">%s</p>',
@@ -74,7 +99,9 @@ function section( $atts, $content ) {
 add_shortcode('section', __NAMESPACE__ . '\\section');
 
 function optin( $atts, $content ) {
-  return OptIn\get_markup();
+  $class = $atts['class'] ?? '';
+  $button_text = $atts['button_text'] ?? '';
+  return OptIn\get_markup($class, $button_text);
 }
 add_shortcode('opt-in', __NAMESPACE__ . '\\optin');
 
