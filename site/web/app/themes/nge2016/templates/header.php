@@ -3,7 +3,9 @@
 use NGE\Custom\Nav;
 
 $header_classes = ['site__header', 'header'];
-if (!is_front_page()) {
+if (is_front_page()) {
+  array_push($header_classes, 'site__header--home');
+} else {
   array_push($header_classes, 'header--solid');
 }
 

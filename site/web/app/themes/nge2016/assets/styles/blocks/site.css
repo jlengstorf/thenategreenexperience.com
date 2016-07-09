@@ -1,5 +1,6 @@
 .site {
   margin-top: 0;
+  background: $color-lightest;
 
   &__header {
     position: fixed;
@@ -7,6 +8,10 @@
     left: 0;
     width: 100vw;
     z-index: 100;
+
+    &--home {
+      position: absolute;
+    }
   }
 
   &__content {

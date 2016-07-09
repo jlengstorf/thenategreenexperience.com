@@ -9,7 +9,7 @@
 
 .wp-caption-text,.wp-caption-dd {
   display: block;
-  margin-top: 0;
+  margin-top: calc( $height-unit / 2 );
   padding: 0;
   color: $color-caption;
   font-family: $font-family-sans;
@@ -34,22 +34,24 @@
   }
 }
 
-figure.aligncenter,dl.aligncenter {
+figure.aligncenter,dl.aligncenter,figure.alignnone,dl.alignnone {
   margin-top: $height-unit;
 
   @media (min-width: 800px) {
-    margin-left: -65px;
-    margin-right: -65px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 
     img {
+      display: block;
       max-width: 780px;
-      width: 780px;
+      width: auto;
     }
 
     figcaption.wp-caption-text,dd.wp-caption-dd {
-      width: 780px;
+      width: auto;
       max-width: 780px;
+      text-align: center;
     }
   }
 }

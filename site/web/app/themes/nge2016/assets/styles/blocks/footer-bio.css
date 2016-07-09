@@ -9,12 +9,12 @@
     border-radius: 50%;
 
     .js--lazyload {
-      border: 1px solid $color-caption;
       border-radius: 50%;
     }
   }
 
   &__image {
+    border: 1px solid $color-caption;
     border-radius: 50%;
   }
 
