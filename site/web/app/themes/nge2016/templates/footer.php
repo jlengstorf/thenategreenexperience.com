@@ -2,6 +2,7 @@
 
 use NGE\Custom\Nav;
 use NGE\Custom\Popover;
+use NGE\Custom\Peeker;
 
 ?>
 <footer class="site__footer footer">
@@ -35,3 +36,4 @@ use NGE\Custom\Popover;
 <?php
 
 Popover\markup();
+Peeker\markup();

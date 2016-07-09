@@ -1,3 +1,5 @@
+import { getOffsetTop } from './offset';
+
 let isScrolling = false;
 
 const getCurrentURL = () => {
@@ -77,18 +79,6 @@ const scrollToLocation = (element, targetPos, duration) => (
     });
   })
 );
-
-const getOffsetTop = ( element ) => {
-  let offsetTop = 0;
-
-  do {
-    if (!isNaN(element.offsetTop)) {
-      offsetTop += element.offsetTop;
-    }
-  } while (element = element.offsetParent);
-
-  return offsetTop;
-};
 
 const scrollToAnchor = (event, {
   uri,

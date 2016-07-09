@@ -22,7 +22,8 @@ $sage_includes = [
   'lib/opt-in.php',    // Custom NGE opt-in
   'lib/footnotes.php',    // Custom NGE footnotes handling
   'lib/custom-fields.php',    // Custom NGE ACF settings and initialization
-  'lib/popover.php',    // Custom NGE ACF settings and initialization
+  'lib/popover.php',    // Custom NGE popover
+  'lib/peeker.php',    // Custom NGE sidebar peeker thing
 ];
 
 foreach ($sage_includes as $file) {
