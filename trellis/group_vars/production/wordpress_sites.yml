@@ -3,7 +3,7 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
-  nategreen.org:
+  thenategreenexperience.com:
     site_hosts:
       - nategreen.org
     local_path: ../site
@@ -16,4 +16,4 @@ wordpress_sites:
       enabled: true
       provider: letsencrypt
     cache:
-      enabled: false
+      enabled: true
