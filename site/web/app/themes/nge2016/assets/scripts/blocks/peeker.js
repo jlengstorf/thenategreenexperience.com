@@ -27,7 +27,7 @@ const init = ({ peekerClass, elementClass }) => {
 
   // Get the article container and figure out where “mostly done reading” is.
   const article = document.getElementsByClassName(elementClass).item(0);
-  const waypoint = getOffsetTop(article) + article.offsetHeight - window.innerHeight;
+  const waypoint = getOffsetTop(article) + article.offsetHeight / 2;
 
   // Add a listener to show the peeker when the reader hits the waypoint.
   document.addEventListener('scroll', event => {
