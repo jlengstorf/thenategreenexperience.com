@@ -1,10 +1,10 @@
 .button {
   display: block;
   max-width: 90vw;
-  width: 300px;
+  width: 380px;
   margin-left: auto;
   margin-right: auto;
-  padding: $height-unit $height-unit calc( $height-unit * 0.675 );
+  padding: calc( $height-unit * 0.75 )  $height-unit; /*calc( $height-unit * 0.75 );*/
   background: $color-brand;
   border: 0;
   border-radius: calc( $height-unit / 2 );
