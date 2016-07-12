@@ -1,6 +1,21 @@
+<?php
+
+use Roots\Sage\Assets;
+
+?>
 <div class="popover popover--fade-out popover--hidden" id="sign-up">
   <div class="popover__content">
-    <div class="popover__image-wrap"><?= do_shortcode('[headshot classes="popover__image"]') ?></div>
+    <div class="popover__image-wrap">
+      <div class="popover__lazyload js--lazyload"
+           style="padding-bottom: 100%">
+        <img src="<?= Assets\asset_path('images/nate-talking.jpg') ?>"
+             srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-lazyload="<?= Assets\asset_path('images/nate-talking.jpg') ?> 210w,
+                            <?= Assets\asset_path('images/nate-talking@2x.jpg') ?> 420w"
+             alt="Nate Green talking"
+             class="popover__image">
+      </div>
+    </div>
     <div class="popover__text-wrap">
       <h2 class="popover__heading"><?php the_field('popover_heading', 'options'); ?></h2>
       <div class="popover__text"><?php the_field('popover_text', 'options'); ?></div>

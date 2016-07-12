@@ -20,6 +20,9 @@
   }
 
   &__label {
+
+    /* Hidden per Nate’s request. */
+    display: none;
     position: absolute;
     top: calc( $height-unit / 3 );
     left: calc( $height-unit * 2 / 3 );
@@ -35,7 +38,11 @@
     display: block;
     width: 100%;
     margin-top: 0;
-    padding: 0.5rem 0.5rem 0;
+
+    /*
+     * If labels come back, use this padding.
+     padding: 0.5rem 0.5rem 0;*/
+    padding: 0.25rem 0.5rem;
     border: 2px solid $color-gray-medium;
     border-radius: 3.5px;
     font-size: 16px;
@@ -60,6 +67,18 @@
     padding-bottom: 0.75rem;
   }
 
+  &__privacy {
+    margin-top: calc( $height-unit / 2 );
+    color: $color-caption;
+    font-family: $font-family-sans;
+    font-size: 50%;
+    font-weight: $font-weight-light;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   @media $viewport-sm {
     &__form {
       align-items: top;
@@ -74,7 +93,7 @@
     }
 
     &__input {
-      padding-top: 0.5rem;
+      /*padding-top: 0.5rem;*/
       line-height: 1.375rem;
     }
 

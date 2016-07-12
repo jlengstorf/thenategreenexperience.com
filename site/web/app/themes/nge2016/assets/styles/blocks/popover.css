@@ -53,6 +53,7 @@
 
     @media $viewport-sm {
       padding: calc( $height-unit * 2 );
+      padding-bottom: $height-unit;
     }
   }
 
