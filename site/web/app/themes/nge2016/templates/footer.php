@@ -27,6 +27,10 @@ use NGE\Custom\Peeker;
       <a href="<?= home_url('/') ?>" class="footer__link footer__link--inline">Nate Green</a>
     </span>
     <span class="footer__credit">
+      Photos by
+      <a href="https://www.facebook.com/House-of-Schaab-Photography-1539810696232583/" class="footer__link footer__link--inline">House of Schaab</a>
+    </span>
+    <span class="footer__credit">
       Site designed and built by
       <a href="https://lengstorf.com/?utm_source=thenategreenexperience.com&amp;utm_medium=site-credit&amp;utm_campaign=web-design" class="footer__link footer__link--inline">Jason Lengstorf</a>
     </span>
