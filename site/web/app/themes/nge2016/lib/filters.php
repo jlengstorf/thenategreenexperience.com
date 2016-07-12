@@ -35,7 +35,11 @@ function wrapped_image( $matches ) {
   $image = $matches['image'];
   $ratio = $matches['height'] / $matches['width'] * 100;
   $padding = "padding-bottom: $ratio%;";
-  return sprintf('<div class="js--lazyload" style="%s">%s</div>', $padding, $image);
+  if (preg_match('/srcset=/i', $image)) {
+    return sprintf('<div class="js--lazyload" style="%s">%s</div>', $padding, $image);
+  } else {
+    return $image;
+  }
 }
 
 function add_lazyloading( $content ) {
