@@ -10,25 +10,6 @@
   background-size: cover;
   border-bottom: 2px solid $color-darkest;
 
-  &::before {
-    content: 'See What People Say About Me\A\2304';
-    position: absolute;
-    bottom: $height-unit;
-    left: 50%;
-    color: $color-lightest;
-    font-family: $font-family-sans;
-    font-size: 75%;
-    font-weight: $font-weight-bold;
-    letter-spacing: 0.1em;
-    line-height: 1;
-    text-align: center;
-    text-shadow: 1px 1px 2px color( $color-darkest alpha(75%) );
-    text-transform: uppercase;
-    transform: translateX(-50%);
-    white-space: pre;
-    z-index: 2;
-  }
-
   &::after {
     content: '';
     position: absolute;
@@ -173,5 +154,29 @@
 
   &__button {
     width: auto;
+  }
+
+  &__read-more {
+    position: absolute;
+    bottom: $height-unit;
+    left: 50%;
+    color: $color-lightest;
+    font-family: $font-family-sans;
+    font-size: 75%;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px color( $color-darkest alpha(75%) );
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    white-space: pre;
+    z-index: 2;
+
+    &::after {
+      content: '\2304';
+      display: block;
+    }
   }
 }
