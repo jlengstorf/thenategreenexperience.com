@@ -6,6 +6,20 @@
     $excerpt = get_the_excerpt();
   }
 
+  // Get only the primary category for display.
+  $category_array = get_the_category();
+  $category_blacklist = ['essay', 'tactical'];
+  foreach ($category_array as $category) {
+    if (!in_array($category->slug, $category_blacklist)) {
+      $category = sprintf('<a href="%s" class="%s">%s</a>',
+        esc_url(get_category_link($category->term_id)),
+        'post-preview__meta-link',
+        $category->name
+      );
+      break;
+    }
+  }
+
 ?>
   <article class="content__article post-preview">
     <header class="post-preview__header">
@@ -23,7 +37,7 @@
     </section>
     <footer class="post-preview__footer">
       <p class="post-preview__meta post-preview__meta--category">
-        <a href="#" class="post-preview__meta-link">Health &amp; Fitness</a>
+        <?= $category ?>
       </p>
       <p class="post-preview__meta post-preview__meta--read-more">
         <a href="<?php the_permalink(); ?>"
