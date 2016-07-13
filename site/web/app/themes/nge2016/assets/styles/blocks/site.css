@@ -15,6 +15,7 @@
   }
 
   &__content {
+    min-height: 95vh;
     margin-top: 0;
   }
 }
