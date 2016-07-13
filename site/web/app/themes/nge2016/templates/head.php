@@ -1,3 +1,8 @@
+<?php
+
+use Roots\Sage\Assets;
+
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -8,6 +13,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#427ef3">
   <meta name="theme-color" content="#fbfafb">
   <?php wp_head(); ?>
+  <style><?= file_get_contents(Assets\asset_path('styles/main.css')) ?></style>
   <?php if (is_admin_bar_showing()): ?>
   <style>#wpadminbar{margin-top:0;}.site__header{top:46px}@media screen and (min-width: 783px){.site__header{top:32px}}</style>
   <?php endif; ?>
