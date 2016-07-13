@@ -4,7 +4,7 @@
   min-height: 100vh;
   margin-top: 0;
   padding: 50vw calc( $width-unit * 5 ) 10vh;
-  background-image: url(../images/nate-green-xxs.jpg);
+  background-image: url(/app/themes/nge2016/dist/images/nate-green-xxs.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,39 +25,39 @@
   }
 
   @media $res-2x {
-    background-image: url(../images/nate-green-xxs@2x.jpg);
+    background-image: url(/app/themes/nge2016/dist/images/nate-green-xxs@2x.jpg);
   }
 
   @media $viewport-xs {
     padding-top: 44vw;
-    background-image: url(../images/nate-green-xs.jpg);
+    background-image: url(/app/themes/nge2016/dist/images/nate-green-xs.jpg);
 
     &::after {
       top: 40vw;
     }
 
     @media $res-2x {
-      background-image: url(../images/nate-green-xs@2x.jpg);
+      background-image: url(/app/themes/nge2016/dist/images/nate-green-xs@2x.jpg);
     }
   }
 
   @media $viewport-sm {
     padding-top: 37vw;
-    background-image: url(../images/nate-green-sm.jpg);
+    background-image: url(/app/themes/nge2016/dist/images/nate-green-sm.jpg);
 
     &::after {
       top: 35vw;
     }
 
     @media $res-2x {
-      background-image: url(../images/nate-green-sm@2x.jpg);
+      background-image: url(/app/themes/nge2016/dist/images/nate-green-sm@2x.jpg);
     }
   }
 
   @media $viewport-md {
     padding-top: 20vw;
     padding-left: 275px;
-    background-image: url(../images/nate-green-md.jpg);
+    background-image: url(/app/themes/nge2016/dist/images/nate-green-md.jpg);
 
     &::after {
       content: '';
@@ -71,33 +71,33 @@
     }
 
     @media $res-2x {
-      background-image: url(../images/nate-green-md@2x.jpg);
+      background-image: url(/app/themes/nge2016/dist/images/nate-green-md@2x.jpg);
     }
   }
 
   @media $viewport-lg {
     padding-top: 30vh;
-    background-image: url(../images/nate-green-lg.jpg);
+    background-image: url(/app/themes/nge2016/dist/images/nate-green-lg.jpg);
 
     &::after {
       width: 60vw;
     }
 
     @media $res-2x {
-      background-image: url(../images/nate-green-lg@2x.jpg);
+      background-image: url(/app/themes/nge2016/dist/images/nate-green-lg@2x.jpg);
     }
   }
 
   @media $viewport-xl {
     padding-left: calc( $width-unit * 13 );
-    background-image: url(../images/nate-green-xl.jpg);
+    background-image: url(/app/themes/nge2016/dist/images/nate-green-xl.jpg);
 
     &::after {
       width: 50vw;
     }
 
     @media $res-2x {
-      background-image: url(../images/nate-green-xl@2x.jpg);
+      background-image: url(/app/themes/nge2016/dist/images/nate-green-xl@2x.jpg);
     }
   }
 
