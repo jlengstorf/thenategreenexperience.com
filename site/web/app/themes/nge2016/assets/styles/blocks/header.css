@@ -22,10 +22,14 @@
 
   &__nav {
     position: relative;
-    display: flex;
-    justify-content: flex-end;
+    display: block;
     margin: 0 calc( $width-unit * 5 );
     z-index: 2;
+
+    @supports (display: flex) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &__link {

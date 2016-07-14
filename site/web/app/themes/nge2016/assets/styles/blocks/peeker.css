@@ -36,7 +36,7 @@
     border: 0;
 
     .opt-in__form {
-      flex-direction: column;
+      display: block;
     }
 
     .opt-in__input-group,.opt-in__submit {
