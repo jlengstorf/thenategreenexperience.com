@@ -44,7 +44,11 @@ function wrapped_image( $matches ) {
 
 function add_lazyloading( $content ) {
   $pattern = '/(?<image><img(?:.*?)width="(?<width>\d+)"(?:.*?)height="(?<height>\d+)"(?:.*?)>)/i';
-  return preg_replace_callback($pattern, __NAMESPACE__ . '\\wrapped_image', $content);
+  return preg_replace_callback(
+    $pattern,
+    __NAMESPACE__ . '\\wrapped_image',
+    $content
+  );
 }
 add_filter('the_content', __NAMESPACE__ . '\\add_lazyloading', 90);
 
@@ -58,3 +62,18 @@ function filter_image_content( $content ) {
   return preg_replace($pattern, $replace, $content);
 }
 add_filter( 'the_content', __NAMESPACE__ . '\\filter_image_content', 100 );
+
+/**
+ * Adds the blog image to the media selector so you can choose a custom size.
+ *
+ * @param  [array] $sizes The current array of size options
+ * @return [array]        The updated array of size options
+ */
+function media_size_options($sizes) {
+  $addsizes = array(
+    "blog-image" => 'Blog Image (USE THIS ONE, NATE)',
+  );
+
+  return array_merge($sizes, $addsizes);
+}
+add_filter('image_size_names_choose', __NAMESPACE__ . '\\media_size_options');

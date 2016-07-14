@@ -37,6 +37,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  add_image_size('blog-image', 690, 690, false);
+  add_image_size('blog-image@2x', 1380, 1380, false);
+
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
   // add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
