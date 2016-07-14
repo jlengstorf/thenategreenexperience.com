@@ -3,9 +3,9 @@
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
-  nategreen.org:
+  thenategreenexperience.com:
     site_hosts:
-      - nategreen.dev
+      - thenategreenexperience.dev
     local_path: ../site
     admin_email: jason@lengstorf.com
     multisite:
