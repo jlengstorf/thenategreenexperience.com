@@ -29,3 +29,9 @@
     group: no
     owner: no
     rsync_opts: --chmod=Du=rwx,--chmod=Dg=rx,--chmod=Do=rx,--chmod=Fu=rw,--chmod=Fg=r,--chmod=Fo=r
+
+- name: Run gulp without production flag
+  command: gulp
+  connection: local
+  args:
+    chdir: "{{ project.local_path }}/web/app/themes/nge2016"
