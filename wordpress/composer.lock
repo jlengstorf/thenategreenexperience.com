@@ -1,27 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "df0aa48a6e840135a0f926cfd2c2db11",
-    "content-hash": "f60c14eaea3e39cf8e91ef75550315f4",
+    "content-hash": "5491ec92f5e3caa077b8e79e29aff6da",
     "packages": [
-        {
-            "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.3.7",
-            "dist": {
-                "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.3.7",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "^1.0",
-                "philippbaschke/acf-pro-installer": "^1.0"
-            },
-            "type": "wordpress-muplugin"
-        },
         {
             "name": "composer/installers",
             "version": "v1.0.25",
@@ -120,7 +104,48 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2016-04-13T19:46:30+00:00"
+        },
+        {
+            "name": "ivome/graphql-relay-php",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ivome/graphql-relay-php.git",
+                "reference": "bc5f8aae9fd72ca16decce3892ec4311e9742a93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ivome/graphql-relay-php/zipball/bc5f8aae9fd72ca16decce3892ec4311e9742a93",
+                "reference": "bc5f8aae9fd72ca16decce3892ec4311e9742a93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4,<8.0-DEV",
+                "webonyx/graphql-php": ">=0.7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "satooshi/php-coveralls": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "description": "A PHP port of GraphQL Relay reference implementation",
+            "homepage": "https://github.com/ivome/graphql-relay-php",
+            "keywords": [
+                "Relay",
+                "api",
+                "graphql"
+            ],
+            "time": "2016-10-29T23:29:29+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -128,16 +153,54 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715"
+                "reference": "b380854fcf742a6acd25ba5baee731a97057277f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
-                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/b380854fcf742a6acd25ba5baee731a97057277f",
+                "reference": "b380854fcf742a6acd25ba5baee731a97057277f",
                 "shasum": ""
             },
             "require": {
+                "johnpbloch/wordpress-core": "4.5.3",
                 "johnpbloch/wordpress-core-installer": "~0.2",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-03-18T04:47:30+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "4.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "44759d1391c7b4d50db9aaf76ef93ff680542b66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/44759d1391c7b4d50db9aaf76ef93ff680542b66",
+                "reference": "44759d1391c7b4d50db9aaf76ef93ff680542b66",
+                "shasum": ""
+            },
+            "require": {
                 "php": ">=5.3.2"
             },
             "type": "wordpress-core",
@@ -155,9 +218,10 @@
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
-                "cms"
+                "cms",
+                "wordpress"
             ],
-            "time": "2016-06-21 16:31:21"
+            "time": "2017-02-11T06:10:05+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -205,7 +269,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-06-11 15:15:30"
+            "time": "2015-06-11T15:15:30+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -247,63 +311,7 @@
             "keywords": [
                 "env"
             ],
-            "time": "2016-05-08 17:14:32"
-        },
-        {
-            "name": "philippbaschke/acf-pro-installer",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PhilippBaschke/acf-pro-installer.git",
-                "reference": "045980ffb3f60f02fba31623edfdc363945bd482"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PhilippBaschke/acf-pro-installer/zipball/045980ffb3f60f02fba31623edfdc363945bd482",
-                "reference": "045980ffb3f60f02fba31623edfdc363945bd482",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "php": ">=5.5",
-                "vlucas/phpdotenv": "^2.2"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*",
-                "phpunit/phpunit": "4.8.*",
-                "satooshi/php-coveralls": "1.*",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "PhilippBaschke\\ACFProInstaller\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "PhilippBaschke\\ACFProInstaller\\": "src/ACFProInstaller"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Philipp Baschke",
-                    "email": "philipp@baschke.com"
-                }
-            ],
-            "description": "An install helper for Advanced Custom Fields PRO",
-            "keywords": [
-                "acf",
-                "composer",
-                "env",
-                "plugin",
-                "pro",
-                "wordpress",
-                "wp"
-            ],
-            "time": "2016-05-19 07:34:23"
+            "time": "2016-05-08T17:14:32+00:00"
         },
         {
             "name": "roots/soil",
@@ -345,7 +353,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2016-03-07 19:49:21"
+            "time": "2016-03-07T19:49:21+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -402,7 +410,7 @@
             "keywords": [
                 "wordpress wp bcrypt password"
             ],
-            "time": "2016-03-01 16:27:06"
+            "time": "2016-03-01T16:27:06+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -452,7 +460,139 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-06-14 14:14:52"
+            "time": "2016-06-14T14:14:52+00:00"
+        },
+        {
+            "name": "webonyx/graphql-php",
+            "version": "v0.12.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "psr/http-message": "^1.0",
+                "react/promise": "2.*"
+            },
+            "suggest": {
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP port of GraphQL reference implementation",
+            "homepage": "https://github.com/webonyx/graphql-php",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "time": "2018-09-02T14:59:54+00:00"
+        },
+        {
+            "name": "wp-graphql/wp-graphiql",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-graphql/wp-graphiql.git",
+                "reference": "543617f1b257cd9bbc0682628bb32bd1e60cd959"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphiql/zipball/543617f1b257cd9bbc0682628bb32bd1e60cd959",
+                "reference": "543617f1b257cd9bbc0682628bb32bd1e60cd959",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Bahl",
+                    "email": "jasonbahl@mac.com"
+                }
+            ],
+            "description": "GraphiQL IDE in the WP-Admin. Works with the WPGraphQL plugin. https://github.com/wp-graphql/wp-graphql",
+            "time": "2019-10-23T22:33:08+00:00"
+        },
+        {
+            "name": "wp-graphql/wp-graphql",
+            "version": "v0.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-graphql/wp-graphql.git",
+                "reference": "c3f6b733fcb4f11f9789aeb93e6015f4d8e61348"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/c3f6b733fcb4f11f9789aeb93e6015f4d8e61348",
+                "reference": "c3f6b733fcb4f11f9789aeb93e6015f4d8e61348",
+                "shasum": ""
+            },
+            "require": {
+                "ivome/graphql-relay-php": "0.3.1",
+                "webonyx/graphql-php": "0.12.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "0.5.0",
+                "lucatume/wp-browser": "2.2.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.0",
+                "squizlabs/php_codesniffer": "3.5.4",
+                "wp-coding-standards/wpcs": "2.1.1"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "WPGraphQL\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Bahl",
+                    "email": "jasonbahl@mac.com"
+                },
+                {
+                    "name": "Edwin Cromley"
+                },
+                {
+                    "name": "Ryan Kanner"
+                },
+                {
+                    "name": "Hughie Devore"
+                },
+                {
+                    "name": "Chris Zarate"
+                }
+            ],
+            "description": "GraphQL API for WordPress",
+            "time": "2020-04-14T22:02:55+00:00"
         },
         {
             "name": "wp-sync-db/wp-sync-db",
@@ -460,12 +600,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-sync-db/wp-sync-db.git",
-                "reference": "8f18390a83374089acfac202491e78d4938616fd"
+                "reference": "575aef7cc5fa005d0c104a83426d91435ebd5b8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-sync-db/wp-sync-db/zipball/8f18390a83374089acfac202491e78d4938616fd",
-                "reference": "8f18390a83374089acfac202491e78d4938616fd",
+                "url": "https://api.github.com/repos/wp-sync-db/wp-sync-db/zipball/575aef7cc5fa005d0c104a83426d91435ebd5b8b",
+                "reference": "575aef7cc5fa005d0c104a83426d91435ebd5b8b",
                 "shasum": ""
             },
             "require": {
@@ -484,7 +624,7 @@
                 "wordpress",
                 "wp-sync-db"
             ],
-            "time": "2016-04-24 08:56:12"
+            "time": "2018-08-07T15:10:28+00:00"
         },
         {
             "name": "wp-sync-db/wp-sync-db-media-files",
@@ -516,7 +656,7 @@
                 "wordpress",
                 "wp-sync-db"
             ],
-            "time": "2016-03-07 16:34:12"
+            "time": "2016-03-07T16:34:12+00:00"
         },
         {
             "name": "wpackagist-plugin/disqus-conditional-load",
@@ -528,9 +668,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disqus-conditional-load.10.2.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/disqus-conditional-load.10.2.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -567,7 +705,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2016-04-16 21:52:24"
+            "time": "2016-04-16T21:52:24+00:00"
         },
         {
             "name": "yoast/api-libs",
@@ -605,7 +743,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-07-14 10:25:59"
+            "time": "2015-07-14T10:25:59+00:00"
         },
         {
             "name": "yoast/i18n-module",
@@ -643,7 +781,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2016-04-29 11:09:50"
+            "time": "2016-04-29T11:09:50+00:00"
         },
         {
             "name": "yoast/license-manager",
@@ -688,20 +826,20 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2016-06-13 14:57:57"
+            "time": "2016-06-13T14:57:57+00:00"
         },
         {
             "name": "yoast/wordpress-seo",
             "version": "3.3.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Yoast/wordpress-seo.git",
-                "reference": "344962075e49eca3d7594cd998cb4bfac333ddcc"
+                "url": "https://github.com/Yoast-dist/wordpress-seo.git",
+                "reference": "ff21698c99c6e019df1584023362840b008cf52b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/344962075e49eca3d7594cd998cb4bfac333ddcc",
-                "reference": "344962075e49eca3d7594cd998cb4bfac333ddcc",
+                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/ff21698c99c6e019df1584023362840b008cf52b",
+                "reference": "ff21698c99c6e019df1584023362840b008cf52b",
                 "shasum": ""
             },
             "require": {
@@ -742,7 +880,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2016-06-30 10:04:36"
+            "time": "2018-03-23T12:05:13+00:00"
         }
     ],
     "packages-dev": [
@@ -822,7 +960,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-05-30 22:24:32"
+            "time": "2016-05-30T22:24:32+00:00"
         }
     ],
     "aliases": [],
@@ -836,5 +974,6 @@
     "platform": {
         "php": ">=5.5"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
