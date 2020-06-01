@@ -1,0 +1,43 @@
+.main {
+  margin: 5rem auto;
+  max-width: 54ch;
+  width: 90vw;
+}
+
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6 {
+  color: var(--heading);
+}
+
+.main h1 {
+  font-size: 1.75rem;
+}
+
+.main h2 {
+  font-size: 1.5rem;
+  margin-top: 4rem;
+}
+
+.main h3 {
+  font-size: 1.25rem;
+  margin-top: 3rem;
+}
+
+.main h4 {
+  font-size: 1.125rem;
+  margin-top: 2rem;
+}
+
+.main figure {
+  margin: 2.5rem 0 1.5rem;
+  max-width: 100%;
+}
+
+.main figcaption {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}

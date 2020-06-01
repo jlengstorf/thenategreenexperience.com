@@ -1,0 +1,47 @@
+.header {
+  --width: 0;
+
+  background: white;
+  display: flex;
+  font-family: var(--font-heading);
+  justify-content: space-between;
+  padding: 0.625rem calc((100vw - 54ch) / 2) 0.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.header::before,
+.header::after {
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+}
+
+.header::before {
+  background: var(--gray);
+  width: 100vw;
+}
+
+.header::after {
+  background: var(--primary);
+  width: var(--width);
+}
+
+.header a {
+  color: var(--header);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-transform: lowercase;
+}
+
+.nav a {
+  display: block;
+  margin-left: 1rem;
+}
