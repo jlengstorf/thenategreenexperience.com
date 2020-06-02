@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Header from './header';
 import OptIn from './opt-in';
+import Footer from './footer';
 import styles from '../styles/layout.module.css';
 
 import '../styles/global.css';
@@ -29,15 +29,7 @@ const Layout = ({ children }) => {
       <Header />
       <main className={styles.main}>{children}</main>
       <OptIn />
-      <footer>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/blog/">Blog</Link>
-          <Link to="/about/">About</Link>
-          <Link to="/newsletter/">Newsletter</Link>
-          <a href="https://twitter.com/TheNateGreen">Twitter</a>
-        </nav>
-      </footer>
+      <Footer />
     </>
   );
 };

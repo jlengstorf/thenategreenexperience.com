@@ -18,10 +18,11 @@ const OptIn = () => {
 
   return (
     <aside className={styles.container}>
+      <img src="/images/skull.jpg" alt="human skull illustration" />
       <div
+        className={styles.content}
         dangerouslySetInnerHTML={{ __html: result.wordpress.page.content }}
       />
-      <img src="/images/skull.jpg" alt="human skull illustration" />
       <form
         action="/.netlify/functions/subscribe"
         method="POST"
