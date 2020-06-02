@@ -18,7 +18,11 @@ const OptIn = () => {
 
   return (
     <aside className={styles.container}>
-      <img src="/images/skull.jpg" alt="human skull illustration" />
+      <img
+        className={styles.skull}
+        src="/images/skull.jpg"
+        alt="human skull illustration"
+      />
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: result.wordpress.page.content }}
@@ -48,6 +52,11 @@ const OptIn = () => {
         only be used to send you my newsletter, and you can subscribe with one
         click at any time.
       </p>
+      <img
+        className={styles.logos}
+        src="/images/as-seen-in.png"
+        alt="As seen in The Four Hour Work Week, Men’s Health, Los Angeles Times, Precision Nutrition"
+      />
     </aside>
   );
 };

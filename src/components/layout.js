@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import OptIn from './opt-in';
 import Footer from './footer';
@@ -7,10 +8,22 @@ import styles from '../styles/layout.module.css';
 
 import '../styles/global.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, newsletter = true }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      wordpress {
+        generalSettings {
+          title
+          description
+        }
+      }
+    }
+  `);
+
+  const { title, description } = data.wordpress.generalSettings;
   return (
     <>
-      <Helmet>
+      <Helmet titleTemplate={`%s · ${title}`} defaultTitle={title}>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link
@@ -25,10 +38,11 @@ const Layout = ({ children }) => {
           media="print"
           onload="this.media='all'"
         />
+        <meta name="description" content={description} />
       </Helmet>
       <Header />
       <main className={styles.main}>{children}</main>
-      <OptIn />
+      {newsletter && <OptIn />}
       <Footer />
     </>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 
 export const query = graphql`
@@ -17,10 +18,15 @@ const PostTemplate = ({ data }) => {
   const post = data.wordpress.post;
 
   return (
-    <Layout>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </Layout>
+    <>
+      <Helmet>
+        <title>{post.title}</title>
+      </Helmet>
+      <Layout>
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </Layout>
+    </>
   );
 };
 
