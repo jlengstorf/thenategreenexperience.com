@@ -24,6 +24,11 @@ const Layout = ({ children, newsletter = true }) => {
   return (
     <>
       <Helmet titleTemplate={`%s · ${title}`} defaultTitle={title}>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossorigin
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link
