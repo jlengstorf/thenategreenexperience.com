@@ -24,6 +24,8 @@ const Layout = ({ children, newsletter = true }) => {
   return (
     <>
       <Helmet titleTemplate={`%s · ${title}`} defaultTitle={title}>
+        <html lang="en" />
+        <meta charSet="utf-8" />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
