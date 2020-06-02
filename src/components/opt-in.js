@@ -20,7 +20,7 @@ const OptIn = () => {
     <aside className={styles.container}>
       <img
         className={styles.skull}
-        src="/images/skull.jpg"
+        src="https://res.cloudinary.com/nategreen/image/upload/q_auto,f_auto/v1591112988/skull.jpg"
         alt="human skull illustration"
       />
       <div
@@ -54,7 +54,7 @@ const OptIn = () => {
       </p>
       <img
         className={styles.logos}
-        src="/images/as-seen-in.png"
+        src="https://res.cloudinary.com/nategreen/image/upload/q_auto,f_auto/v1591112986/as-seen-in.png"
         alt="As seen in The Four Hour Work Week, Men’s Health, Los Angeles Times, Precision Nutrition"
       />
     </aside>
