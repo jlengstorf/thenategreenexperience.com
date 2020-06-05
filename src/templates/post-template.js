@@ -23,7 +23,7 @@ const PostTemplate = ({ data }) => {
     <>
       <SEO title={post.title} date={post.date} modified={post.modified} blog />
       <Layout>
-        <h1>{post.title}</h1>
+        <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </Layout>
     </>
