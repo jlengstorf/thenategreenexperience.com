@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 export const query = graphql`
   query($id: ID!) {
@@ -9,6 +9,8 @@ export const query = graphql`
       post(id: $id) {
         title
         content
+        date
+        modified
       }
     }
   }
@@ -19,9 +21,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <>
-      <Helmet>
-        <title>{post.title}</title>
-      </Helmet>
+      <SEO title={post.title} date={post.date} modified={post.modified} blog />
       <Layout>
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />

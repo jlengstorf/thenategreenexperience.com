@@ -14,13 +14,13 @@ const Layout = ({ children, newsletter = true }) => {
       wordpress {
         generalSettings {
           title
-          description
         }
       }
     }
   `);
 
-  const { title, description } = data.wordpress.generalSettings;
+  const { title } = data.wordpress.generalSettings;
+
   return (
     <>
       <Helmet titleTemplate={`%s · ${title}`} defaultTitle={title}>
@@ -45,7 +45,6 @@ const Layout = ({ children, newsletter = true }) => {
           media="print"
           onload="this.media='all'"
         />
-        <meta name="description" content={description} />
       </Helmet>
       <Header />
       <main className={styles.main}>{children}</main>

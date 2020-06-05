@@ -45,13 +45,8 @@ const OptIn = () => {
             className={styles.input}
           />
         </label>
-        <button className={styles.button}>Subscribe</button>
+        <button className={styles.button}>Join Now</button>
       </form>
-      <p className={styles.privacy}>
-        I will never share or sell your personal information. Your email will
-        only be used to send you my newsletter, and you can subscribe with one
-        click at any time.
-      </p>
       <img
         className={styles.logos}
         src="https://res.cloudinary.com/nategreen/image/upload/q_auto,f_auto/v1591112986/as-seen-in.png"
