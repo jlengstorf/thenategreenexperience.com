@@ -20,9 +20,33 @@ const SEO = ({ title, date, modified, blog = false }) => {
   const location = useLocation();
   const currentUrl = `${siteUrl}${location.pathname}`;
 
+  // WPGraphQL gives back HTML-encoded quotes, so we need to un-encode those
+  const dirtyTitle = title || site.title;
+  const cleanedTitle = dirtyTitle.replace(
+    /&#\d{4};/g,
+    (match, _offset, str) => {
+      const ENTITY_MAP = {
+        '&#8211;': '–',
+        '&#8217;': '’',
+        '&#8220;': '“',
+        '&#8221;': '”',
+        '&#8230;': '…',
+      };
+
+      if (ENTITY_MAP[match]) {
+        return ENTITY_MAP[match];
+      }
+
+      console.log(`missing match for ${match}`);
+      return match;
+    },
+  );
+
+  console.log({ cleanedTitle });
+
   return (
     <Helmet>
-      <title>{title || site.title}</title>
+      <title>{cleanedTitle}</title>
       <meta name="description" content={site.description} />
       <script type="application/ld+json">
         {`
@@ -53,7 +77,7 @@ const SEO = ({ title, date, modified, blog = false }) => {
               "@type": "WebPage",
               "@id": "${currentUrl}#webpage",
               "url": "${currentUrl}",
-              "name": "${title || site.title}",
+              "name": "${cleanedTitle}",
               "isPartOf": {
                 "@id": "${siteUrl}/#website"
               },
