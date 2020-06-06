@@ -56,11 +56,12 @@
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": "^3.7",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.3",
     "yoast/wordpress-seo": "^3.3",
     "wp-sync-db/wp-sync-db": "*@dev",
     "wp-sync-db/wp-sync-db-media-files": "*@dev",
-    "wpackagist-plugin/disqus-conditional-load": "^10.2"
+    "wpackagist-plugin/disqus-conditional-load": "^10.2",
+    "wp-graphql/wp-graphql": "^0.8.3",
+    "wp-graphql/wp-graphiql": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

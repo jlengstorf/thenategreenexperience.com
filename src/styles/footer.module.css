@@ -1,0 +1,22 @@
+.footer {
+  border-top: 1px solid var(--gray);
+  margin: 1rem auto;
+  max-width: 90vw;
+  padding-top: 1rem;
+  width: 32rem;
+}
+
+.footer nav {
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: center;
+  text-transform: lowercase;
+}
+
+.footer a {
+  color: var(--text-light);
+  display: block;
+  margin: 0 0.25rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
