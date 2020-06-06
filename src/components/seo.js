@@ -37,7 +37,6 @@ const SEO = ({ title, date, modified, blog = false }) => {
         return ENTITY_MAP[match];
       }
 
-      console.log(`missing match for ${match}`);
       return match;
     },
   );
