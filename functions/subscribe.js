@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 exports.handler = async (event) => {
   const formId = process.env.CK_FORM_ID;
   const url = `https://api.convertkit.com/v3/forms/${formId}/subscribe`;
-  const { firstName, email } = qs.parse(event.body);
+  const { fname, email } = qs.parse(event.body);
 
   try {
     await fetch(url, {
@@ -14,7 +14,7 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         api_key: process.env.CK_API_KEY,
-        first_name: firstName,
+        first_name: fname,
         email,
       }),
     })
