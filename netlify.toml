@@ -5,3 +5,8 @@
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+
+[[redirects]]
+  from = "https://store.nategreen.org/products/the-2-day-workout-fix"
+  to = "https://nategreen.org/2-day-workout-fix-full-program/"
+  status = 301
