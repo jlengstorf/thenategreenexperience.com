@@ -22,6 +22,10 @@ export const query = graphql`
 const Blog = ({ data }) => {
   const posts = data.wordpress.posts.nodes;
 
+  if (posts.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <SEO
